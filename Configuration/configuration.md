@@ -48,7 +48,7 @@ adf_client.pipelines.create_run(rg_name, df_name, p_name, params)
 	
 	- Autor: Iván Ingaramo.
 
-
+<code><pre>
 from cryptography.fernet import Fernet
 
 # Ejecutar Paso a Paso la primera vez. Seguir las instrucciones.
@@ -99,6 +99,6 @@ def decrypt(nombreArchivoEncriptado):
 
 # Prueba
 usuario, password = decrypt("NOMBRE_ARCHIVO_ENCRIPTADO")
-
----------------------
 </code></pre>
+---------------------
+
