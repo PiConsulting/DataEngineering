@@ -101,3 +101,4 @@ def decrypt(nombreArchivoEncriptado):
 usuario, password = decrypt("NOMBRE_ARCHIVO_ENCRIPTADO")
 
 ---------------------
+</code></pre>
