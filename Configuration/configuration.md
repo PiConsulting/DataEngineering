@@ -43,8 +43,11 @@ adf_client.pipelines.create_run(rg_name, df_name, p_name, params)
 	- Uso: paso a paso que permite crear un archivo .bin que guardará datos de usuario y contraseña encriptados. Brinda una función para luego desencriptar dichos datos y devolverlos como String. Adaptable para encriptar y desencriptar más de dos datos.
 
 	- Palabras clave: Encriptar, Encriptación, Fernet, Script.
+
 	- Lenguaje: Python.
+
 	- Autor: Iván Ingaramo.
+
 
 <pre><code>from cryptography.fernet import Fernet
 
