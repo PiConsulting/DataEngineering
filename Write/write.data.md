@@ -24,7 +24,7 @@ $ctx = New-AzureStorageContext -StorageAccountName $StorageAccountName -StorageA
 $ContainerName = "container-name"
 $target = "C:\Folder\To\Files\"
 
-#subimos los archivos al blob storage y lo eliminamos del directorio local
+#subimos los archivos al blob storage
 $archivos = Get-ChildItem -Path $target
 $archivos | ForEach-Object($_){
 		$BlobNameBackup = "blobFolder\$($_.Name)"
