@@ -8,7 +8,7 @@ Repository of code snippets for usual data engineering stuff.
 ```
 - Uso: script que trae resultadods de una query en sql server desde PowerShell. 
 
-- Palabras clave: sql, sql server, azure, powershell, service principal, Az.
+- Palabras clave: sql, sql server, azure, powershell, sqlcmd.
 
 - Lenguaje: PowerShell.
 
