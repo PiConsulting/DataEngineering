@@ -106,3 +106,36 @@ usuario, password = decrypt("NOMBRE_ARCHIVO_ENCRIPTADO")
 </code></pre>
 ---------------------
 
+**Crear conexión a una BD SQL Server ocultando usuario y password**
+
+```
+- Uso: script que crea una conexión a una base de datos SQL Server sin mostrar las credenciales, usando la función decrypt() del script de Encriptación y Desencriptación con Cryptography Fernet.
+
+- Palabras clave: conectar, conexión, sql, desencriptar, credenciales, password, ocultar.
+
+- Lenguaje: Python.
+
+- Autor: Iván Ingaramo.
+
+```
+
+```
+# Se debe importar el script de Encriptar y Desencriptar con Fernet, el cual se encuentra en este mismo archivo Configuration.md
+import decrypt as de
+import pandas as pd
+import sqlalchemy as sa
+import urllib
+
+# La función recibe el nombre de tu base de datos. Adaptar el nombre del driver de ser necesario.
+def connect(nombreBD):
+    user, pwd = de.decrypt(nombreBD)
+    params = urllib.parse.quote_plus("DRIVER={ODBC Driver 17 for SQL Server};"
+                                    r"SERVER=" + "tu_server" + ";"
+                                    "DATABASE=" + nombreBD + ";"
+                                    "UID=" + user + ";"
+                                    "PWD=" + pwd)
+    
+    conn = sa.create_engine("mssql+pyodbc:///?odbc_connect={}".format(params))
+    return conn
+
+```
