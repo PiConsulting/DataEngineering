@@ -12,6 +12,9 @@ Configuraciones de cosas tediosas que podamos automatizar.
 	- Palabras clave: Data Factory, Azure, Pipeline, Parameters.
 
 	- Lenguaje: Python.
+	
+	- Autor: Martin Zurita.
+	
 <pre><code>from azure.mgmt.datafactory import DataFactoryManagementClient
 from azure.common.credentials import UserPassCredentials #To login with user and pass, use this.
 from azure.common.credentials import ServicePrincipalCredentials #To login with service principal (appid and client secret) use this
