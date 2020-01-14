@@ -139,3 +139,35 @@ def connect(nombreBD):
     return conn
 
 ```
+
+---
+
+**Login azure con service principal**
+
+```
+- Uso: script que permite loguear en azure con un Service Principal, despues de ejecutar estas lineas se pueden correr comandos de la libreria Az de PowerShell y estaran autenticados.
+
+- Palabras clave: login, loguear, azure, powershell, service principal, Az.
+
+- Lenguaje: PowerShell.
+
+- Autor: Martin Zurita.
+
+```
+
+```
+$service_principal_key = "LLENAR"
+$service_principal_appID = "LLENAR"
+#Tenant id se consigue en azure yendo a Azure Active Directory, 
+$tenant_ID = "LLENAR"
+
+$secpasswd = ConvertTo-SecureString $service_principal_key -AsPlainText -Force
+
+$creds = New-Object System.Management.Automation.PSCredential ($service_principal_appID, $secpasswd)
+
+Login-AzAccount -Credential $creds -ServicePrincipal -TenantId $tenant_ID
+```
+
+
+---
+
