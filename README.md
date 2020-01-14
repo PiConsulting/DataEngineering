@@ -14,6 +14,9 @@ Intentemos mantener el formato, esta organizado para que interprete bien el mark
 	- Palabras clave: como si fueran hashtags en twitter, que ayuden a quien busque algo con CTRL+F.
 
 	- Lenguaje: Python, PowerShell, .NET, whatever
+	
+	- Autor: nombre y apellido.
+	
 <pre><code>def tu_codigo_aca(args):
 	# Puede incluir comentarios
 	a = b
